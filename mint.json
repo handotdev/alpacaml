@@ -1,0 +1,62 @@
+{
+  "name": "Alpaca",
+  "logo": "/images/logo.png",
+  "favicon": "/favicon.png",
+  "colors": {
+    "primary": "#EC5B63",
+    "light": "#EE8133",
+    "dark": "#E93593",
+    "ultraLight": "#FCDCC5",
+    "ultraDark": "#480629"
+  },
+  "topbarCtaButton": {
+    "name": "Register",
+    "url": "https://www.getalpaca.io/"
+  },
+  "topbarLinks": [
+    {
+      "name": "Sign In",
+      "url": "https://accounts.getalpaca.io/sign-in?redirect_url=https%3A%2F%2Fwww.getalpaca.io%2Fdashboard"
+    }
+  ],
+  "anchors": [
+    {
+      "name": "Community",
+      "icon": "discord",
+      "url": "https://discord.com/invite/7YpFzJb3"
+    }
+  ],
+  "navigation": [
+    {
+      "group": "💻 Setup",
+      "pages": ["setup/installing"]
+    },
+    {
+      "group": "⭐ Quickstart",
+      "pages": ["quickstart/getting-started", "quickstart/best-practices"]
+    },
+    {
+      "group": "📃 Documentation",
+      "pages": [
+        "documentation/photoshop-setup",
+        "documentation/commands",
+        "documentation/parameters",
+        "documentation/settings",
+        "documentation/photoshop-layers"
+      ]
+    },
+    {
+      "group": "🐛 Issues",
+      "pages": ["issues/known-issues-and-bugs"]
+    }
+  ],
+  "footerSocials": {
+    "website": "https://www.getalpaca.io",
+    "discord": "https://discord.com/invite/7YpFzJb3"
+  },
+  "classes": {
+    "anchors": "group-hover:bg-gradient-to-tr from-[#f09] to-[#ff7a00]",
+    "activeAnchors": "bg-gradient-to-tr"
+  },
+  "backgroundImage": "/images/background.png"
+}

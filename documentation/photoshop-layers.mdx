@@ -1,0 +1,16 @@
+---
+title: "alpaca and Photoshop's Layers"
+---
+
+## Managing layers with alpaca
+
+Every action in **alpaca** will result in a new layer being created with the
+result of your query. This is both to allow you to discard bad results, but also
+to be able to blend a result with previous layers.
+
+Every layer created by **alpaca** should have its corresponding prompt as name.
+
+If you see layers with names such as "alpaca_12345", do not worry, those are
+layers used internally by alpaca to pre-process your selections for inpainting
+or transfer. They should be automatically deleted once the processing is
+finished.

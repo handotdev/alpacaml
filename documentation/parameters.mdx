@@ -1,0 +1,193 @@
+---
+title: "Parameters"
+---
+
+## Template
+
+Templates are pre-made combinations of prompts and modifiers allowing you to
+quickly see a few different examples if you are new to diffusion models.
+
+## Image Size
+
+Controls the size of the generated images. Note that you can only change this
+parameter for **Imagine**. For other types of jobs, the size of the generated
+images is controlled by the size of the selected area in Photoshop.
+
+## Prompt
+
+Every output from Alpaca starts with a “prompt”, a textual description of the
+desired output. For example:
+
+```yaml
+prompt: a house on hill
+```
+
+<img height="30%" width="30%" src="/images/parameters-1.png" />
+
+A prompt can be as simple or as complex as you like. Detailed prompts tend to
+produce better results.
+
+Finding a good prompt that matches what we want is not always easy, especially
+for newcomers to the world of diffusion models. To make the process of finding
+good prompts easier, there are tools such as [Lexica](https://lexica.art/) to
+see example of prompts and the kind of result you can expect by using them.
+
+Note that using the same prompt as an online example, will not generate the same
+image. More on that in the **seed** section.
+
+You can also decide to not use a prompt, by leaving this box empty. The model
+will then generate a result unguided.
+
+## Number of Images
+
+We can specify the number of images we wish to generate from a particular prompt
+and set of modifiers.
+
+Each image will be different.
+
+<img height="30%" width="30%" src="/images/parameters-2.png" />
+
+Once your image has been generated, you will see the following appear in the
+Jobs panel. The arrows will allow you to toggle through the set of generated
+images. The check will allow you to select your current image and discard all
+others. The cross will discard **all** generated images.
+
+<img height="30%" width="30%" src="/images/parameters-3.png" />
+
+## Modifiers
+
+`Modifiers` allow you to automatically modify a prompt by adding attributes or
+qualities to it.
+
+This is helpful to freeze part of a prompt once you found something you like so
+that you do not have to retype everything all the time.
+
+A modifiers is composed of two parts: the text and the weight. The text simply
+describe the attribute you want to save, and can be as long as you want.
+
+The weight describes how strong that attribute should be, the bigger the weight,
+the more your prompt will be skewed toward it.
+
+Modifiers are stored in the format `<text>::<weight>`, for example:
+
+```yaml
+modifiers:
+	manga::3
+	anime::1
+	drawing::1
+```
+
+We can generate variations on our basic house example from above by adding in
+some modifiers.
+
+```yaml
+modifiers:
+	monet::2
+	watercolor::1
+	sunrise::1
+```
+
+<img height="30%" width="30%" src="/images/parameters-4.png" />
+
+```yaml
+modifiers:
+	simpsons::2
+	animation::1
+	forest::1
+```
+
+<img height="30%" width="30%" src="/images/parameters-5.png" />
+
+```yaml
+modifiers:
+	art deco::1
+	modernist::1
+	photograph::1
+```
+
+<img height="30%" width="30%" src="/images/parameters-6.png" />
+
+## Seed
+
+The seed is an integer value that is the source of randomness in the model. Each
+image By varying the seed, we can generate different images from the same prompt
+and set of modifiers.
+
+On the other hand, generating twice with the same set of prompt, modifiers &
+seed will generate the exact same result twice.
+
+You can leave the prompt to 0 if you just want the model to use a random seed
+everytime.
+
+```yaml
+prompt: a house on a hill
+modifiers:
+	studio ghibli::2
+seed: 1
+```
+
+<img height="30%" width="30%" src="/images/parameters-7.png" />
+
+```yaml
+prompt: a house on a hill
+modifiers:
+	studio ghibli::2
+seed: 24
+```
+
+<img height="30%" width="30%" src="/images/parameters-7b.png" />
+
+Because the seed is responsible for the random noise that the model will then
+use as a starting point to generate images, using the same seed, even when
+varying prompts and modifiers will result in images that have the same
+qualities, such as the general color palette, placement of objects etc. You can
+use this fact to your advantage to increase the coherency of different
+generations.
+
+## Quality
+
+This controls the number of diffusion steps that carry us from the original
+source noise to the final image. By increasing the number of steps, we generally
+improve the quality of the result and it’s correlation with the prompt and
+modifiers.
+
+## Prompt Strength
+
+The prompt strength controls the influence of the prompt — higher values of this
+parameter force the model to be more attentive to the prompt. We can consider
+this to be a “rigid” vs “relaxed” interpretation of the prompt.
+
+```yaml
+prompt: a house on a hill
+modifiers:
+	disney::2
+	animation::1
+seed: 1
+prompt strength: 2
+```
+
+<img height="30%" width="30%" src="/images/parameters-9.png" />
+
+```yaml
+prompt: a house on a hill
+modifiers:
+	disney::2
+	animation::1
+seed: 1
+prompt strength: 11
+```
+
+<img height="30%" width="30%" src="/images/parameters-10.png" />
+
+## Transfer Strength
+
+<Note>Only applies to **Transfer**</Note>
+
+The transfer strength controls how much we want to modify the input image. High
+transfer strength will modify the input image strongly, resulting in an image
+that may not have much relation with the input anymore. While a very low
+strength will not leave enough time for the model to make any noticeable changes
+to the image.
+
+A balanced strength, will keep the main features of the input image alive while
+modifying it enough so that it becomes closer to your prompt

@@ -1,0 +1,44 @@
+---
+title: "Best Practices & Tips"
+---
+
+<Tip>
+  Make sure you followed the section [Correctly Setting up Photoshop for
+  alpaca](/guides/documentation/photoshop-setup) in first.
+</Tip>
+
+## General
+
+- Make use of Photoshop's “Object selection tool" (W) to quickly extract
+  specific items from a generation.
+
+## Imagine
+
+- **Keeping style consistent**: Once you have found a combination of prompt and
+  seed that give you a result that you like, you can "freeze" them in the
+  settings. Extract the constant part from your prompt (e.g "octane render") and
+  store them as modifiers in the settings (see - Modifiers if you don't know how
+  to do that). The seed can also be fixed in the settings. Once fixed that seed
+  will be used for every future command.
+
+## Fil
+
+- **Removing hard edges**: If the selection you want to fill contains hard edges
+  (e.g. the edge of a previous generation), and you get bad results with a
+  subsequent Fill. You will get better results if you first smooth the hard
+  edges, you can use Photoshop's eraser with a very low hardness (less than
+  30%).
+
+<video className="w-full h-96" controls>
+  <source
+    src="https://res.cloudinary.com/mintlify/video/upload/v1667548120/Customers/AlpacaML/best-practice-tips_l8jwix.mp4"
+    type="video/mp4"
+  />
+</video>
+
+## Transfer
+
+- **Adding texture**: If you draw something with very little texture (for
+  example using the bucket), the model will tend to generate something with very
+  little details as well. You can either add more details to your image, or you
+  can use Photoshop tools like "smudge" to automatically add more texture.
