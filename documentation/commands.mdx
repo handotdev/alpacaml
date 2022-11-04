@@ -1,0 +1,54 @@
+---
+title: "Commands"
+---
+
+## Imagine
+
+Simply enter a prompt and alpaca will output an image matching it. You can play
+with the various settings (modifiers, number of steps, guidance scale and seed)
+to get different results.
+
+<video className="w-full h-96" controls>
+  <source
+    src="https://res.cloudinary.com/mintlify/video/upload/v1667546885/Customers/AlpacaML/documentation-3_ldnaqq.mp4"
+    type="video/mp4"
+  />
+</video>
+
+## Fill
+
+Fill will try to fill any transparent pixel in your selection with something
+that is both coherent with the non-transparent pixels, and with the prompt you
+sent.
+
+To use it, first select the area to fill with Photoshop's “Marquee Tool" (M) and
+click on Fill.
+
+<Warning>
+  Be careful to have the right layers selected. When you select an area, you
+  might not actually have selected what you see if you have multiple layers.
+  alpaca will only use pixels that are in the selection and in the currently
+  active layer.
+</Warning>
+
+<video className="w-full h-96" controls>
+  <source
+    src="https://res.cloudinary.com/mintlify/video/upload/v1667547351/Customers/AlpacaML/documentation-4_xen6md.mov"
+    type="video/mp4"
+  />
+</video>
+
+## Transfer
+
+Given a prompt and a selection, **Transfer** will try to match the prompt, while
+keeping the main features that were present in the selection originally.
+
+To use it, first select the area to transfer with Photoshop's “Marquee Tool" (M)
+and click on **Transfer**.
+
+<video className="w-full h-96" controls>
+  <source
+    src="https://res.cloudinary.com/mintlify/video/upload/v1667547661/Customers/AlpacaML/documentation-5_nxwtfw.mov"
+    type="video/mp4"
+  />
+</video>

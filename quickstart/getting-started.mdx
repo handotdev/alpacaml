@@ -1,0 +1,190 @@
+---
+title: "Getting Started"
+description:
+  "Welcome to Alpaca! We are going to walk through a quick starter project to
+  get familiar with the core functions of Alpaca."
+---
+
+In this tutorial, we will cover the Imagine, Outpaint, Inpaint, and Transfer functions, as well as a few key Photoshop tips to help everything work smoothly.
+
+### Opening up a new project file
+
+First, we'll want to create a new project file inside Photoshop. We can create a
+custom file preset that we'll be able to re-use later in future projects —
+1024x1024 px is a good size.
+
+![New project](/images/getting-started-1.png)
+
+### Settings
+
+Now that we're inside Photoshop, we can choose some project settings. Click on
+the gear icon on the Alpaca window to open up the **Settings** panel. Here, we
+can select some **modifiers**, which describe the style we are trying to
+achieve. We can assign **weights** to our modifiers (must be integers) that tell
+Alpaca how much we care about each modifier.
+
+<video className="w-full h-96" controls>
+  <source
+    src="https://res.cloudinary.com/mintlify/video/upload/v1667547863/Customers/AlpacaML/getting-started-video-1_h38uge.mp4"
+    type="video/mp4"
+  />
+</video>
+
+<div className="flex justify-center">
+  <img
+    height="400"
+    width="400"
+    src="/images/getting-started-2.png"
+    alt="Opening new project file"
+  />
+</div>
+
+### Generating an image
+
+Now that we're ready, let's generate our first image. We can do this using the
+**Imagine** function. Here, we can input a text prompt to Alpaca (e.g. “the
+hanging gardens of babylon seen through a cave opening”). You can generate
+between 1-5 images per text prompt. It's usually better to generate many images,
+since the style and quality can vary for each generation.
+
+<video className="w-full h-96" controls>
+  <source
+    src="https://res.cloudinary.com/mintlify/video/upload/v1667547867/Customers/AlpacaML/getting-started-video-2_p5fhqg.mp4"
+    type="video/mp4"
+  />
+</video>
+
+<div className="flex justify-center">
+  <img
+    height="400"
+    width="400"
+    src="/images/getting-started-3.png"
+    alt="Generating"
+  />
+</div>
+
+### Outpainting an image
+
+We can extend an existing image using using the **Outpaint** function. Let's say
+that we liked the look of the turquoise river seen at the bottom of our example
+image above — we can extend this river into the cave at the foreground of the
+image using outpainting. We'll want to use the **Marquee** tool to identify the
+empty space that we want to outpaint. We can think of the parts of the existing
+image we include in the **Marquee** square as “extra information” that Alpaca
+will use to extend the image. Additionally, we'll want to prompt Alpaca by
+describing the what we would like to see in the outpainted section, e.g. “a pale
+turquoise river leading into a cave”.
+
+<Warning>
+  The **Marquee** tool must be of size 1024x1024 pixels for Fill to work. We
+  recommend setting this to be the fixed size of the tool. See [Documentation]
+  (/documentation/photoshop-setup) for more information on how to do that.
+</Warning>
+
+<Warning>
+
+Do make sure that you have the correct **layer** selected when you Fill. If you
+are new to Photoshop, an easy way to make sure you have the correct layer
+selected is to simply **merge all layers** before outpainting or inpainting.
+
+You can do this by hitting `Command+ shift + e`
+
+</Warning>
+
+<video className="w-full h-96" controls>
+  <source
+    src="https://res.cloudinary.com/mintlify/video/upload/v1667547878/Customers/AlpacaML/getting-started-video-3_bpoxsm.mp4"
+    type="video/mp4"
+  />
+</video>
+
+<div className="flex justify-center">
+  <img
+    height="400"
+    width="400"
+    src="/images/getting-started-4.png"
+    alt="Outpainting"
+  />
+</div>
+
+### Filling an image
+
+We can use Photoshop's Erase tool to remove an existing object or to indicate
+where we would like to draw in a one, then use the Fill function to fill in the
+empty space however we would like. In this example, let's erase one of the rocks
+from the river we just created and Fill in some water where the rock used to be
+using the prompt “turquoise water reflecting a cave ceiling”.
+
+<Warning>
+  The **Marquee** tool must be of size 1024x1024 pixels for Fill to work. We
+  recommend setting this to be the fixed size of the tool. See [Documentation]
+  (/documentation.overview) for more information on how to do that.
+</Warning>
+
+<Warning>
+
+Do make sure that you have the correct **layer** selected when you Fill. If you
+are new to Photoshop, an easy way to make sure you have the correct layer
+selected is to simply **merge all layers** before outpainting or inpainting.
+
+You can do this by hitting `Command+ shift + e`
+
+</Warning>
+
+<video className="w-full h-96" controls>
+  <source
+    src="https://res.cloudinary.com/mintlify/video/upload/v1667547869/Customers/AlpacaML/getting-started-video-4_r0d8fd.mp4"
+    type="video/mp4"
+  />
+</video>
+
+<div className="flex justify-center">
+  <img
+    height="400"
+    width="400"
+    src="/images/getting-started-5.png"
+    alt="Filling"
+  />
+</div>
+
+### Transforming objects using Transfer
+
+Finally, we can use the **Marquee** tool again to select parts of the image that
+we would like to transform. In our example, let's say that we want to slightly
+change the style of the rock near the entrance of the cave. We can free-form
+select the rock using the **Marquee** tool (no need to have a 1024x1024 pixel
+square here) and prompt Alpaca to **Transfer** using the prompt “a rock in
+water”. Here, because we simply wanted a variation on the existing object, we
+could use an equally simple prompt. There are lots of different ways to use the
+**Transfer** function — for example, we could have chosen _“a red rock”_, or _“a
+frog sitting on top of a rock”_. Other fun ways to use the **Transfer** function
+are to transform external images or simple drawings into the style of our
+project (check in with us on Discord to learn more!).
+
+The **Transfer** function will generate a new layer in the shape of whatever we
+have selected using the **Marquee** tool. To blend things nicely, we can erase
+around the object using the **Erase** tool to reveal the previous layer and then
+merge all layers together when we're happy with the result.
+
+<video className="w-full h-96" controls>
+  <source
+    src="https://res.cloudinary.com/mintlify/video/upload/v1667547870/Customers/AlpacaML/getting-started-video-5_iucaey.mp4"
+    type="video/mp4"
+  />
+</video>
+
+<div className="flex justify-center">
+  <img
+    height="400"
+    width="400"
+    src="/images/getting-started-6.png"
+    alt="Transfer"
+  />
+</div>
+
+---
+
+Congrats on making your first project with Alpaca! We hope you enjoyed, be sure
+to write to us on Discord, or by email at
+[help@alpacaml.io](mailto:help@alpacaml.io) if you ran into any problems along
+the way.

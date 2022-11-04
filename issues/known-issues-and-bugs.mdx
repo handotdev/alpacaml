@@ -1,0 +1,34 @@
+---
+title: "Known Issues and Bugs"
+---
+
+## General
+
+- **Result from a job imported in a new document**: If a result from one of your
+  jobs is received while you have a modal opened (be it from alpaca or
+  photoshop), this will cause an error in Photoshop and leave a new document
+  opened. For now, you can either wait for the results to be received before
+  opening modals, or just manually close the new document. We are working on a
+  fix to wait until there is no modal opened before loading the result.
+
+## Inpainting & Transfer
+
+- **Could not complete your request because the selected area is empty**: If
+  some corners of your selection are outside the canvas, you will get this error
+  as many times as there are corners outside 🤗 This is caused by processing
+  that alpaca must do before sending the request to the backed, we are working
+  on a fix to remove the errors.
+- **Fill & Transfer slower than Imagine**: In order to do inpainting or
+  transfer, the model must see what is in your selection area to predict
+  something coherent. This means an image will be uploaded for processing. In
+  the worst case, that image can be up to ~3MB if you are selecting a complex
+  1024x1024 image. If your connection is slow that can take some amount of time
+  to upload. Imagine only needs your prompt and as such requires much less data
+  to be uploaded.
+- **Black or White results with Transfer**: This happens when you are using the
+  Transfer feature while having a selection that is partly or entirely
+  transparent. Transparent pixels will be converted to either black or white by
+  the model before processing and thus the result will be heavily influenced by
+  those pixels. Currently, the best way to deal with this is to first fill the
+  transparent zone, either with Inpaint or yourself, and then Transfer. We are
+  working on allowing you to Transfer incomplete selections directly.
