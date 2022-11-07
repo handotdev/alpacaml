@@ -23,7 +23,12 @@
     {
       "name": "Community",
       "icon": "discord",
-      "url": "https://discord.com/invite/7YpFzJb3"
+      "url": "https://discord.gg/wEqSpGYGnS"
+    },
+    {
+      "name": "Twitter",
+      "icon": "twitter",
+      "url": "https://twitter.com/alpacaML"
     }
   ],
   "navigation": [
@@ -38,7 +43,6 @@
     {
       "group": "📃 Documentation",
       "pages": [
-        "documentation/photoshop-setup",
         "documentation/commands",
         "documentation/parameters",
         "documentation/settings",
@@ -52,7 +56,8 @@
   ],
   "footerSocials": {
     "website": "https://www.getalpaca.io",
-    "discord": "https://discord.com/invite/7YpFzJb3"
+    "twitter": "https://twitter.com/alpacaML",
+    "discord": "https://discord.gg/wEqSpGYGnS"
   },
   "classes": {
     "anchors": "group-hover:bg-gradient-to-tr from-[#f09] to-[#ff7a00]",
