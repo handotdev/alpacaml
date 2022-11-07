@@ -4,13 +4,11 @@ title: "Commands"
 
 ## Imagine
 
-Simply enter a prompt and alpaca will output an image matching it. You can play
-with the various settings (modifiers, number of steps, guidance scale and seed)
-to get different results.
+Simply enter a prompt and alpaca will output an image matching it. You can play with the various settings to get different results.
 
 <video className="w-full h-96" controls>
   <source
-    src="https://res.cloudinary.com/mintlify/video/upload/v1667546885/Customers/AlpacaML/documentation-3_ldnaqq.mp4"
+    src="https://github.com/AlpacaML/docs/raw/main/videos/imagine.mp4"
     type="video/mp4"
   />
 </video>
@@ -31,24 +29,50 @@ click on Fill.
   active layer.
 </Warning>
 
-<video className="w-full h-96" controls>
-  <source
-    src="https://res.cloudinary.com/mintlify/video/upload/v1667547351/Customers/AlpacaML/documentation-4_xen6md.mov"
-    type="video/mp4"
-  />
-</video>
+
+
+<figure>
+  <video className="w-full h-96" controls>
+    <source
+      src="https://github.com/AlpacaML/docs/raw/main/videos/inpaint.mp4"
+      type="video/mp4"
+      alt="Changing an Image with Fill"
+    />
+  </video>
+  <figcaption>Changing an Image with Fill</figcaption>
+</figure>
+
+<figure>
+  <video className="w-full h-96" controls>
+    <source
+      src="https://github.com/AlpacaML/docs/raw/main/videos/outpaint.mp4"
+      type="video/mp4"
+      alt="Extending an image with Fill"
+    />
+  </video>
+  <figcaption>Extending an image with Fill</figcaption>
+</figure>
 
 ## Transfer
 
 Given a prompt and a selection, **Transfer** will try to match the prompt, while
 keeping the main features that were present in the selection originally.
 
-To use it, first select the area to transfer with Photoshop's “Marquee Tool" (M)
+To use it, first select the area to transfer with Photoshop's **Marquee** tool (M)
 and click on **Transfer**.
 
-<video className="w-full h-96" controls>
-  <source
-    src="https://res.cloudinary.com/mintlify/video/upload/v1667547661/Customers/AlpacaML/documentation-5_nxwtfw.mov"
-    type="video/mp4"
-  />
-</video>
+<Tip>
+Adjust the Transfer Strength to get the result you want: The closer the result you want to achieve is to the original image, the lower you should set the Transfer Strength. Inversly, the more you want the model to modify the image, the higher you should set it 
+</Tip>
+
+
+<figure>
+  <video className="w-full h-96" controls>
+    <source
+      src="https://github.com/AlpacaML/docs/raw/main/videos/transfer2.mp4"
+      type="video/mp4"
+      alt="Modifying an image with Transfer"
+    />
+  </video>
+  <figcaption>Modifying an image with Transfer</figcaption>
+</figure>
