@@ -15,8 +15,8 @@
   },
   "topbarLinks": [
     {
-      "name": "Sign In",
-      "url": "https://accounts.getalpaca.io/sign-in?redirect_url=https%3A%2F%2Fwww.getalpaca.io%2Fdashboard"
+      "name": "Dashboard",
+      "url": "https://www.getalpaca.io/dashboard"
     }
   ],
   "anchors": [
