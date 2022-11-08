@@ -33,6 +33,10 @@
   ],
   "navigation": [
     {
+      "group": "🦙 Home",
+      "pages": ["home/welcome"]
+    },
+    {
       "group": "💻 Setup",
       "pages": ["setup/installing"]
     },
